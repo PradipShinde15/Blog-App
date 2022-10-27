@@ -1,10 +1,22 @@
 package com.pradip.blog.payloads;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
 public class UserDTO {
 	private int id;
+	@NotEmpty
+	@Size(min=4 ,message = "UserName Must be min 4 charectors")
 	private String name;
+
+	@Email(message="email adrress is not valid")
+	@NotEmpty
 	private String email;
+	@NotEmpty
+	@Size(min=3,max=10,message = "Password must be min of 3 chars and max of 10 chars")
 	private  String Password;
+	@NotEmpty
 	private String about;
 	public UserDTO(int id, String name, String email, String password, String about) {
 		super();

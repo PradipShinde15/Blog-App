@@ -1,5 +1,6 @@
 /.metadata/
  .gitignore
 blog-app-api/.gitignore
+ blog-app-api/src/main/resources/META-INF/
 
 
